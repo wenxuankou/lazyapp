@@ -1,0 +1,22 @@
+
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = off
+indent_style = space
+
+[**.{js,css}]
+indent_size = 2
+
+[**.{rb,sql}]
+indent_size = 2
+
+[**.{html,slim,erb,sh}]
+indent_size = 2
+
+[**.{java,xml}]
+indent_size = 2

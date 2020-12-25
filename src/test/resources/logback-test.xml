@@ -1,0 +1,25 @@
+<configuration>
+  <property name="HOME" value="." />
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${HOME}/lazyApp.log</file>
+
+    <encoder>
+      <pattern>%date %-5level [%thread] %logger{40} [L:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="pers.edison.lazyapp" level="info">
+    <appender-ref ref="FILE" />
+  </logger>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>

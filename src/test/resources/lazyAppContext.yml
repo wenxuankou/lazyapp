@@ -1,0 +1,32 @@
+scanners:
+  - pers.edison.lazyapp
+settings:
+  - name: appName
+    value: Edison`s blog
+  - name: settings
+    file: settings.properties
+beans:
+  - id: laptop
+    className: pers.edison.lazyapp.mock.Laptop
+    params:
+      - type: java.lang.String
+        value: intel-i7-9700k
+      - type: java.lang.String
+        value: 1TB
+      - type: java.lang.String
+        value: 16GB
+      - type: pers.edison.lazyapp.mock.Boy
+        ref: $boy
+  - id: boy
+    className: pers.edison.lazyapp.mock.Boy
+    properties:
+      - type: java.lang.String
+        value: fucking kids
+        name: name
+      - type: int
+        value: 3
+        name: age
+      - type: java.lang.String
+        value: XXX school
+        name: schoolName
+
